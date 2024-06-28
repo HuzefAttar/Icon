@@ -1,0 +1,44 @@
+body
+{
+  background: red;
+}
+#box 
+{
+  height:400px;
+  width: 400px;
+  background: black;
+  padding: 8px;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  margin: 150px 100px 100px 280px;
+  overflow: hidden;
+}
+#in 
+{
+  height: 100%;
+  width: 100px;
+  background: black;
+  position: relative;
+  height: 380px;
+  width: 380px;
+  z-index: 99;
+}
+#box::after
+{
+  content:"";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%)rotate(45deg);
+  height: 600px;
+  width: 200px;
+background: white;
+animation: move 1.5s infinite;
+}
+@keyframes move {
+  100%{
+    transform: translate(-50%,-50%)rotate(225deg);
+  }
+}
